@@ -188,6 +188,52 @@ See the inference cell in Notebook 3 for the full pipeline.
 
 ---
 
+## Ongoing Work: 3D Point Cloud Integration for Building Height Estimation
+
+This project is actively evolving. The current Height-Aware module (Part D) was designed as a stepping stone toward full **3D building change detection** by fusing satellite imagery with airborne LiDAR point clouds.
+
+### Motivation
+2D change detection tells us *where* buildings changed, but not *how* — a single-story house demolished and replaced by a 10-story tower appears identical in a binary change mask. Integrating point cloud data lets us answer:
+- **What is the height of new/demolished structures?**
+- **How did the urban volumetric footprint change over time?**
+- **Can we quantify vertical urban growth, not just horizontal?**
+
+### Planned Pipeline
+
+```
+Bi-temporal Satellite Images          Bi-temporal LiDAR Point Clouds
+        (RGB × 2)                           (XYZ × 2)
+            │                                    │
+     CNN Encoder (shared)              PointNet++ / KPConv Encoder
+            │                                    │
+            └──────────┬─────────────────────────┘
+                       │
+              Cross-Modal Fusion
+           (Height Attention + FPN)
+                       │
+              ┌────────┴────────┐
+              │                 │
+      2D Change Mask    Height Change Map
+      (binary: 0/1)    (continuous: meters)
+```
+
+### Key Research Questions
+1. **Multi-modal fusion** — How to best align and fuse dense 2D image features with sparse 3D point cloud features at different resolutions?
+2. **Point cloud encoding** — PointNet++ vs. KPConv vs. voxelization for efficient height feature extraction from raw LiDAR
+3. **Height regression** — Jointly predicting binary change mask + continuous height difference in a multi-task framework
+4. **Data scarcity** — Paired satellite + LiDAR temporal datasets are rare; exploring transfer learning and synthetic DSM generation
+
+### Why This Matters
+Urban planners and disaster response teams need to know not just *that* a building changed, but *how much* it changed in 3D. This has direct applications in:
+- **Urban growth monitoring** — tracking vertical densification in cities
+- **Post-disaster damage assessment** — estimating structural loss in 3D
+- **Carbon footprint estimation** — building volume correlates with energy consumption
+- **Digital twin updates** — keeping city-scale 3D models current
+
+> This direction is inspired by recent advances in multi-modal remote sensing and 3D geospatial AI. I am actively working toward integrating open LiDAR datasets (DALES, ISPRS Vaihingen 3D) to validate this approach.
+
+---
+
 ## Author
 
 **Hafiz Mohammad Hussain Zaka**
@@ -196,6 +242,8 @@ See the inference cell in Notebook 3 for the full pipeline.
 - [GitHub](https://github.com/HafizMHussain)
 
 BS Geo-Informatics Engineering, NUST Pakistan
+
+*I built this project to push beyond standard benchmarks and explore research-grade problems in geospatial AI. If you're working on LiDAR-based change detection, 3D urban modeling, or multi-modal remote sensing — I'd love to connect and collaborate.*
 
 ## License
 
