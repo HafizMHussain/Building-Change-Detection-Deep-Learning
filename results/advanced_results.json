@@ -1,0 +1,66 @@
+{
+  "project": "Advanced Change Detection Techniques",
+  "dataset": "LEVIR-CD",
+  "techniques": {
+    "Part_A": "Ensemble + TTA",
+    "Part_B": "Multi-Task (CD + Edge)",
+    "Part_C": "Temporal ConvLSTM",
+    "Part_D": "Height-Aware 3D CD"
+  },
+  "results": {
+    "A: Baseline": {
+      "F1": 0.8712,
+      "IoU": 0.7718,
+      "Precision": 0.8807,
+      "Recall": 0.8619
+    },
+    "A: Siamese": {
+      "F1": 0.8808,
+      "IoU": 0.7869,
+      "Precision": 0.8951,
+      "Recall": 0.8669
+    },
+    "A: Attention": {
+      "F1": 0.8919,
+      "IoU": 0.8049,
+      "Precision": 0.8853,
+      "Recall": 0.8986
+    },
+    "A: Ensemble_Avg": {
+      "F1": 0.8934,
+      "IoU": 0.8073,
+      "Precision": 0.9007,
+      "Recall": 0.8862
+    },
+    "A: Attention+TTA": {
+      "F1": 0.8968,
+      "IoU": 0.8129,
+      "Precision": 0.8923,
+      "Recall": 0.9013
+    },
+    "A: TTA+Ensemble": {
+      "F1": 0.8958,
+      "IoU": 0.8112,
+      "Precision": 0.9045,
+      "Recall": 0.8872
+    },
+    "B: MultiTask (CD+Edge)": {
+      "F1": 0.8765,
+      "IoU": 0.7801,
+      "Precision": 0.8886,
+      "Recall": 0.8647
+    },
+    "C: Temporal ConvLSTM": {
+      "F1": 0.8934,
+      "IoU": 0.8073,
+      "Precision": 0.9053,
+      "Recall": 0.8817
+    },
+    "D: HeightAware (6ch)": {
+      "F1": 0.8875,
+      "IoU": 0.7977,
+      "Precision": 0.9036,
+      "Recall": 0.8719
+    }
+  }
+}

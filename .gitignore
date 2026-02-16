@@ -1,0 +1,36 @@
+# Model checkpoints (too large for GitHub)
+*.pth
+*.pt
+*.ckpt
+
+# Data
+*.npy
+*.h5
+*.hdf5
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# Results images (optional, uncomment to include)
+# *.png
+
+# ZIP bundles
+*.zip
+
+# Private files
+email_template.md
+LIS_COURSE_PROPOSAL.md
+LIS_COURSE_PROPOSAL.tex
+notebook3ee49aa17e.ipynb
+references.md
