@@ -1,13 +1,37 @@
 # Building Change Detection in Satellite Imagery Using Deep Learning
 
-A deep learning project for detecting building changes in bi-temporal satellite images using the LEVIR-CD dataset. Implements and compares 6 architectures with advanced techniques including ensemble learning, multi-task boundary detection, temporal ConvLSTM, and height-aware RGB+LiDAR fusion.
+![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c?logo=pytorch&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green)
+![Models](https://img.shields.io/badge/Models-6%20Architectures-orange)
+![Best F1](https://img.shields.io/badge/Best%20F1-0.8968-brightgreen)
+[![Open in Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://www.kaggle.com/)
+
+A deep learning project for detecting building changes in bi-temporal satellite images using the **LEVIR-CD** dataset. Implements and compares **6 architectures** with advanced techniques including ensemble learning, multi-task boundary detection, temporal ConvLSTM, and height-aware RGB+LiDAR fusion. Achieves **F1 = 0.8968** with Attention + Test-Time Augmentation.
 
 <p align="center">
-  <img src="figures/inference_before.png" width="200"/>
-  <img src="figures/inference_after.png" width="200"/>
-  <img src="figures/inference_change_mask.png" width="200"/>
+  <img src="figures/inference_before.png" width="220"/>
+  &nbsp;&nbsp;➜&nbsp;&nbsp;
+  <img src="figures/inference_after.png" width="220"/>
+  &nbsp;&nbsp;➜&nbsp;&nbsp;
+  <img src="figures/inference_change_mask.png" width="220"/>
 </p>
-<p align="center"><em>Before → After → Detected Change Mask</em></p>
+<p align="center"><b>Before &nbsp;→&nbsp; After &nbsp;→&nbsp; Detected Change Mask</b></p>
+
+---
+
+## Table of Contents
+
+- [Results](#results)
+- [Project Structure](#project-structure)
+- [Notebooks](#notebooks)
+- [Dataset](#dataset)
+- [How to Run](#how-to-run)
+- [Inference](#inference)
+- [Tech Stack](#tech-stack)
+- [Key Techniques](#key-techniques)
+- [Ongoing Work: 3D Point Cloud Integration](#ongoing-work-3d-point-cloud-integration-for-building-height-estimation)
+- [Author](#author)
 
 ---
 
