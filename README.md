@@ -22,13 +22,10 @@ A deep learning project for detecting building changes in bi-temporal satellite 
 ## Table of Contents
 
 - [Results](#results)
-- [Project Structure](#project-structure)
 - [Notebooks](#notebooks)
 - [Dataset](#dataset)
 - [How to Run](#how-to-run)
 - [Inference](#inference)
-- [Tech Stack](#tech-stack)
-- [Key Techniques](#key-techniques)
 - [Ongoing Work: 3D Point Cloud Integration](#ongoing-work-3d-point-cloud-integration-for-building-height-estimation)
 - [Author](#author)
 
@@ -53,23 +50,6 @@ Best single model: **Attention CD** (F1 = 0.8919) | Best overall: **Attention + 
 <p align="center">
   <img src="figures/all_advanced_results.png" width="700"/>
 </p>
-
----
-
-## Project Structure
-
-```
-change_detection_project/
-├── notebooks/
-│   ├── 01_LEVIR_CD_Change_Detection.ipynb    # Baseline U-Net (30 epochs)
-│   ├── 02_Advanced_Models_Comparison.ipynb    # 5-model comparison (20 epochs)
-│   └── 03_Advanced_Techniques.ipynb          # 4 advanced techniques (15 epochs)
-├── figures/                                      # Result visualizations
-├── results/
-│   ├── advanced_results.json
-│   └── advanced_results.csv
-└── README.md
-```
 
 ---
 
@@ -181,33 +161,6 @@ See the inference cell in Notebook 3 for the full pipeline.
   <img src="figures/inference_samples.png" width="600"/>
 </p>
 <p align="center"><em>Inference results — Attention model with TTA on test samples</em></p>
-
----
-
-## Tech Stack
-
-| Category | Tool |
-|----------|------|
-| Framework | PyTorch |
-| Segmentation | segmentation-models-pytorch (smp) |
-| Augmentation | Albumentations |
-| Dataset | HuggingFace Datasets |
-| Training | AdamW, CosineAnnealingLR, BCEDice Loss |
-| Metrics | F1, IoU, Precision, Recall |
-
----
-
-## Key Techniques
-
-| Technique | Purpose |
-|-----------|---------|
-| Siamese Encoder | Shared weights for fair temporal comparison |
-| Cross-Attention | Focus on regions with maximum change |
-| Test-Time Augmentation | Free accuracy boost at inference |
-| Model Ensemble | Combine diverse architectures |
-| Multi-Task Learning | Joint change + boundary prediction |
-| ConvLSTM | Learned temporal feature comparison |
-| Height Attention | Fuse LiDAR DSM with RGB features |
 
 ---
 
