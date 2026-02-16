@@ -5,7 +5,6 @@
 ![License](https://img.shields.io/badge/License-MIT-green)
 ![Models](https://img.shields.io/badge/Models-6%20Architectures-orange)
 ![Best F1](https://img.shields.io/badge/Best%20F1-0.8968-brightgreen)
-[![Open in Kaggle](https://kaggle.com/static/images/open-in-kaggle.svg)](https://www.kaggle.com/)
 
 A deep learning project for detecting building changes in bi-temporal satellite images using the **LEVIR-CD** dataset. Implements and compares **6 architectures** with advanced techniques including ensemble learning, multi-task boundary detection, temporal ConvLSTM, and height-aware RGB+LiDAR fusion. Achieves **F1 = 0.8968** with Attention + Test-Time Augmentation.
 
