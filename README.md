@@ -76,6 +76,16 @@ Trains 5 architectures under identical settings:
 - Edge labels derived automatically using morphological operations
 - 70/30 weighted loss (change/edge)
 
+<p align="center">
+  <img src="figures/edge_labels.png" width="700"/>
+</p>
+<p align="center"><em>Multi-Task labels — Change Mask + Auto-derived Boundary Edge</em></p>
+
+<p align="center">
+  <img src="figures/multitask_results.png" width="700"/>
+</p>
+<p align="center"><em>Multi-Task predictions — Change Mask + Edge Detection outputs</em></p>
+
 **Part C -- Temporal ConvLSTM**
 - Replaces hand-crafted feature differencing with learned temporal comparison
 - ConvLSTM cell at the bottleneck of a Siamese encoder
