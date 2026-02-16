@@ -241,7 +241,7 @@ Urban planners and disaster response teams need to know not just *that* a buildi
 - [LinkedIn](https://www.linkedin.com/in/hafizhussainz1)
 - [GitHub](https://github.com/HafizMHussain)
 
-BS Geo-Informatics Engineering, NUST Pakistan
+BE Geo-Informatics Engineering, NUST Pakistan
 
 *I built this project to push beyond standard benchmarks and explore research-grade problems in geospatial AI. If you're working on LiDAR-based change detection, 3D urban modeling, or multi-modal remote sensing — I'd love to connect and collaborate.*
 
