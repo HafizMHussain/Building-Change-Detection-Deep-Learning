@@ -2,6 +2,13 @@
 
 A deep learning project for detecting building changes in bi-temporal satellite images using the LEVIR-CD dataset. Implements and compares 6 architectures with advanced techniques including ensemble learning, multi-task boundary detection, temporal ConvLSTM, and height-aware RGB+LiDAR fusion.
 
+<p align="center">
+  <img src="figures/inference_before.png" width="200"/>
+  <img src="figures/inference_after.png" width="200"/>
+  <img src="figures/inference_change_mask.png" width="200"/>
+</p>
+<p align="center"><em>Before → After → Detected Change Mask</em></p>
+
 ---
 
 ## Results
@@ -20,6 +27,10 @@ A deep learning project for detecting building changes in bi-temporal satellite 
 
 Best single model: **Attention CD** (F1 = 0.8919) | Best overall: **Attention + TTA** (F1 = 0.8968)
 
+<p align="center">
+  <img src="figures/all_advanced_results.png" width="700"/>
+</p>
+
 ---
 
 ## Project Structure
@@ -30,6 +41,7 @@ change_detection_project/
 │   ├── 01_LEVIR_CD_Change_Detection.ipynb    # Baseline U-Net (30 epochs)
 │   ├── 02_Advanced_Models_Comparison.ipynb    # 5-model comparison (20 epochs)
 │   └── 03_Advanced_Techniques.ipynb          # 4 advanced techniques (15 epochs)
+├── figures/                                      # Result visualizations
 ├── results/
 │   ├── advanced_results.json
 │   └── advanced_results.csv
@@ -131,6 +143,11 @@ Image.fromarray(binary_mask).save('change_mask.png')
 ```
 
 See the inference cell in Notebook 3 for the full pipeline.
+
+<p align="center">
+  <img src="figures/inference_samples.png" width="600"/>
+</p>
+<p align="center"><em>Inference results — Attention model with TTA on test samples</em></p>
 
 ---
 
